@@ -1,0 +1,239 @@
+/* Base styles */
+.container {
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0;
+  padding-top: 2%;
+}
+
+.sun {
+  height: calc(100vw * 0.27);
+  width: calc(100vw * 0.27);
+  background-color: #E0863E;
+  border-radius: 50%;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sun-ray {
+  position: absolute;
+  z-index: -1;
+  width: 1000vw; /* Full width of the viewport */
+  height: 2px; /* Thickness of the rays */
+  background-color: #E0863E;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform-origin: center; /* Rotate around the center */
+  transform: translate(-50%, -50%); /* Center the ray */
+}
+
+.ray1 { transform: translate(-50%, -50%) rotate(160deg); }
+.ray2 { transform: translate(-50%, -50%) rotate(145deg); }
+.ray3 { transform: translate(-50%, -50%) rotate(130deg); }
+.ray4 { transform: translate(-50%, -50%) rotate(120deg); }
+.ray5 { transform: translate(-50%, -50%) rotate(110deg); }
+.ray6 { transform: translate(-50%, -50%) rotate(100deg); }
+.ray7 { transform: translate(-50%, -50%) rotate(95deg); }
+.ray8 { transform: translate(-50%, -50%) rotate(20deg); }
+.ray9 { transform: translate(-50%, -50%) rotate(35deg); }
+.ray10 { transform: translate(-50%, -50%) rotate(50deg); }
+.ray11 { transform: translate(-50%, -50%) rotate(60deg); }
+.ray12 { transform: translate(-50%, -50%) rotate(70deg); }
+.ray13 { transform: translate(-50%, -50%) rotate(80deg); }
+.ray14 { transform: translate(-50%, -50%) rotate(85deg); }
+.ray15 { transform: translate(-50%, -50%) rotate(90deg); }
+.ray16 { transform: translate(-50%, -50%) rotate(0deg); }
+
+.sun-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 0% 25%;
+}
+
+.tag {
+  position: relative;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevents text from wrapping */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-and-info {
+  margin-right: 20px;
+}
+
+.register div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adjust spacing */
+  margin-top: -8%;
+  z-index: 1;
+}
+
+.tilted-strike {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+.tilted-strike::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: black;
+  transform: rotate(-10deg); /* Adjust tilt angle */
+}
+
+.scroll {
+  font-size: 0.7em; /* Adjust size if needed */
+  display: block;
+  text-align: center;
+  width: 100%;
+
+}
+
+
+.register button {
+  background-color: white;
+  padding: 15px 40px;
+  border: none;
+  color:#E85C43;
+  border-radius: 5px;
+  font-weight: 700 !important;
+  font-size: 1.5em;
+}
+
+.register > div > a {
+  text-decoration: none !important;
+}
+
+p {
+  color: white;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Prevents wrapping */
+  font-size: 0.9em; /* Adjust size if needed */
+  margin-top: 1em;
+  padding-bottom: 20px;
+}
+
+.HeroFont, .HeroMainFont {
+  text-align: center;
+  color: white;
+}
+
+.HeroMainFont {
+  font-size: 6rem; /* Adjust font size for larger screens */
+  white-space: nowrap; /* Ensure text stays in one line */
+  font-weight: 700;
+}
+
+.HeroFont, .tag, .inline {
+  font-size: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .HeroMainFont {
+    font-size: 4rem; /* Reduce font size for medium screens */
+  }
+
+  .sun {
+    height: calc(100vw * 0.3); /* Increase size for smaller screens */
+    width: calc(100vw * 0.3);
+  }
+
+  .tag, .HeroFont {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .register div {
+    flex-direction: column; /* Stack text and button vertically */
+    gap: 0;
+
+  }
+
+  .inline {
+    font-size: 1rem; /* Reduce font size for smaller screens */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .register button {
+    padding: 10px 15px; /* Reduce button size */
+    font-size: 0.9em;
+    margin: 0;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .p {
+    padding-bottom: 2rem;
+  }
+
+  .HeroMainFont {
+    font-size: 2.5rem; /* Further reduce font size for very small screens */
+    margin-top: 5%;
+  }
+
+  .sun {
+    height: calc(100vw * 0.5); /* Further increase size for very small screens */
+    width: calc(100vw * 0.5);
+  }
+
+  .register button {
+    padding: 8px 15px; /* Further reduce button size */
+    font-size: 1.25em;
+  }
+  
+  .HeroFont {
+    margin-bottom: 3%;
+  }
+  
+  .launch {
+    margin-top: 12%;
+    margin-bottom: 10%;
+  }
+
+  .inline{
+    padding-bottom: 0px;
+  }
+
+  .button-and-info {
+    margin-right: 0px;
+  }
+  
+}

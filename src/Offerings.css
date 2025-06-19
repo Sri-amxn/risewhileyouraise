@@ -1,0 +1,41 @@
+.grid {
+  display: grid;
+  gap: 20px; /* Spacing between cards */
+  justify-content: center;
+  align-items: start; /* Align items to the top */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-top: 0%;
+  background: transparent;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.grid {
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+}
+
+/* Adjust for medium screens */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+  }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+    gap: 10px; /* Reduce gap for very small screens */
+    padding: 2%; /* Reduce padding for very small screens */
+  }
+}

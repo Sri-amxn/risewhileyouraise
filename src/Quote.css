@@ -1,0 +1,88 @@
+/* Container for the quote */
+.quote-container {
+  text-align: center; /* Center the text */
+  padding: 30px; /* Add some padding */
+  max-width: 50%; /* Limit the width of the quote */
+  margin: 0 auto; /* Center the container */
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10%;
+}
+
+/* Style for the quote text */
+.quote-text {
+  font-size: 24px; /* Larger font size */
+  color: #E85C43; /* Dark gray text color */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 25px; /* Space between quote and author */
+}
+
+bold {
+  font-weight: 700;
+}
+
+.cost {
+  text-align: center;
+  color: #E85C43;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+button {
+  color: white;
+  background-color: #E85C43;
+  border-radius: 5px;
+  padding: 10px 20px; /* Adjust padding for better button size */
+  font-size: 1.5rem; /* Default button font size */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Add pointer cursor on hover */
+  margin-bottom: 15px; /* Space between button and cost */
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .quote-container {
+    max-width: 70%; /* Increase width for smaller screens */
+    padding: 20px; /* Reduce padding */
+    margin-top: 5%; /* Reduce top margin */
+  }
+
+  .quote-text {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  button {
+    font-size: 20px; /* Reduce button font size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .cost {
+    font-size: 0.9em; /* Adjust cost font size */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .quote-container {
+    max-width: 90%; /* Increase width for very small screens */
+    padding: 15px; /* Further reduce padding */
+    margin-top: 3%; /* Further reduce top margin */
+  }
+
+  .quote-text {
+    font-size: 18px; /* Further reduce font size */
+    line-height: 1.5; /* Adjust line height */
+  }
+
+  button {
+    font-size: 18px; /* Further reduce button font size */
+    padding: 6px 12px; /* Further adjust button padding */
+  }
+
+  .cost {
+    font-size: 0.8em; /* Further adjust cost font size */
+  }
+}

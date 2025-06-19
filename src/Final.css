@@ -1,0 +1,125 @@
+.container-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 45%; /* Default width for larger screens */
+    margin: 0 auto;
+  }
+  
+  /* Style for the first line (centered) */
+  .center-text {
+    font-size: 3vw;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+  }
+  
+  /* Container for the buttons */
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  /* Ensure both buttons take equal width */
+  .button-container .register-wrapper,
+  .button-container .other-courses-wrapper {
+    flex: 1; /* Equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Ensure the button fills the width */
+  .button-container button {
+    padding: 10px 30px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+
+
+  
+  /* Style for the register button */
+  .button-container .register-button {
+    background-color: white;
+    color: #E85C43;
+    font-weight: 700;
+  }
+  
+  /* Hover effect for buttons */
+  .button-container button:hover {
+    background-color: white;
+    color: #E85C43;
+    font-weight: bold;
+  }
+  
+  /* Style for the price text */
+  .price-text {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For medium screens */
+  @media (max-width: 768px) {
+    .container-final {
+      width: 60%; /* Increase width for medium screens */
+    }
+  
+    .center-text {
+      font-size: 20px; /* Reduce font size for medium screens */
+    }
+  
+    .button-container button {
+      font-size: 14px; /* Reduce button font size */
+      padding: 8px 16px; /* Adjust button padding */
+    }
+  
+    .price-text {
+      font-size: 12px; /* Reduce price text size */
+    }
+  }
+  
+  /* For small screens */
+  @media (max-width: 480px) {
+    .container-final {
+      width: 90%; /* Increase width for small screens */
+      padding: 10px; /* Reduce padding for small screens */
+    }
+  
+    .center-text {
+      font-size: 18px; /* Further reduce font size for small screens */
+    }
+  
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 15px; /* Increase gap between stacked buttons */
+    }
+  
+    .button-container button {
+      font-size: 12px; /* Further reduce button font size */
+      padding: 6px 12px; /* Further adjust button padding */
+      font-size: 1.5em;
+    }
+  
+    .price-text {
+      font-size: 15px; /* Further reduce price text size */
+    }
+  }

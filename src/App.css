@@ -1,0 +1,23 @@
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #A96C21, #E85C43 );
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.about-coach {
+  color: white;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .about-coach {
+    font-size: 5.5vw;
+    margin-top: 10%;
+
+  }
+}

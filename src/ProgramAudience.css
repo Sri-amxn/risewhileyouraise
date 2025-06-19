@@ -1,0 +1,167 @@
+/* Container for the program audience section */
+.program-audience {
+  max-width: calc(100vw * 0.70);
+  margin: 0 auto;
+  padding: 5%;
+}
+
+/* Style for headings */
+.program-audience h2 {
+  font-size: 3vw;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 700;
+
+}
+
+/* Container for the cards */
+.card-container {
+  display: grid;
+  gap: 20px; /* Consistent gap between cards */
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  padding-top: 0%;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto; /* Centers the grid */
+  margin-top: 0;
+}
+
+/* Default for larger screens */
+.card-container {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+}
+
+/* Style for individual cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  height: 100%; /* Make all cards the same height */
+}
+
+/* Styling SVG icons */
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%; /* Proportional width relative to card */
+  max-width: 50px; /* Prevents icons from getting too large */
+  height: auto;
+}
+
+.card-icon img {
+  width: 100%; /* Make the image take full width of the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for card headings */
+.card h3 {
+  font-size: 20px;
+  color: #E85C43;
+  margin-bottom: 10px; /* Consistent spacing */
+  font-weight: bold;
+}
+
+/* Style for card paragraphs */
+.card p {
+  font-size: 16px;
+  color: #E85C43;
+  line-height: 1.6;
+  margin-top: 0; /* Prevent extra spacing */
+}
+
+.black {
+  background-color: #212529;
+  border: 1px solid #212529;
+  justify-content: space-evenly;
+}
+
+span {
+  color: black;
+  font-weight: bold;
+}
+
+/* Adjust for medium screens */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .program-audience {
+    max-width: 95vw;
+    
+  }
+  .program-audience h2 {
+    font-size: 5.5vw;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+
+  /* Reduce font sizes for smaller screens */
+  .card h3 {
+    font-size: 18px; /* Reduce heading font size */
+    
+  }
+
+  .card p {
+    font-size: 14px; /* Reduce paragraph font size */
+  }
+
+  /* Adjust icon size for smaller screens */
+  .card-icon {
+    display: none;
+  }
+
+  .card {
+    justify-content: space-evenly;
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+  .program-audience{
+    width: 100vw;
+    padding: 2%;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+    gap: 10px; /* Reduce gap for very small screens */
+    padding: 0%; /* Reduce padding for very small screens */
+  }
+
+  .card {
+    padding: 4%;
+    justify-content: space-evenly;
+  }
+
+
+  /* Further reduce font sizes for very small screens */
+  .card h3 {
+    font-size: 16px; /* Further reduce heading font size */
+  }
+
+  .card p {
+    font-size: 12px; /* Further reduce paragraph font size */
+  }
+
+  /* Adjust icon size for very small screens */
+  .card-icon {
+    display: none;
+  }
+}

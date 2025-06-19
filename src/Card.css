@@ -1,0 +1,33 @@
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 37vh; /* Ensures uniform height */
+  height: 100%; /* Allows cards to grow uniformly */
+  position: relative; /* Required for absolute positioning of child elements */
+  margin-top: 0;
+  justify-content: space-between ;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto; /* Adjusts height to maintain aspect ratio */
+  max-height: 70%; /* Limits height of image */
+  object-fit: contain; /* Ensures the image fits well */
+}
+
+.cardTitle {
+  color: #e85c43 !important;
+  font-weight: 700 !important;
+  position: absolute; /* Anchor the text */
+  bottom: 10px; /* Position 10px above the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  margin: 0; /* Remove default margin */
+  width: 80%; /* Limits width of title */
+}

@@ -1,0 +1,115 @@
+.coach-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  gap: 20px; /* Space between image and text */
+  max-width: 65%;
+  margin: 0 auto; /* Center the container */
+  width: 100%; /* Ensure the container takes the full width */
+}
+
+/* Image takes 30% space */
+.coach-image {
+  flex: 1; /* 30% of the space */
+  display: flex;
+  justify-content: center;
+  max-width: 30%; /* Limit image width */
+}
+
+.coach-image img {
+  width: 100%; /* Ensure image fills container */
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Text takes 70% space */
+.coach-text {
+  flex: 2; /* 70% of the space */
+  padding: 10px;
+  text-align: left;
+  display: block;
+  align-self: flex-start;
+}
+
+.coach-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.coach-text p {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.unselectable {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */       
+} 
+
+/* Media Queries for Responsiveness */
+
+/* For medium screens */
+@media (max-width: 768px) {
+  .coach-container {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .coach-image {
+    max-width: 40%; /* Increase image width for medium screens */
+  }
+
+  .coach-image img {
+    width: 100%;
+  }
+
+  .coach-text {
+    width: 100%; /* Make text take full width */
+    text-align: center;
+  }
+
+  .coach-text h2 {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* For small screens */
+@media (max-width: 480px) {
+  .coach-container {
+    padding: 10px;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .coach-image {
+    max-width: 60%; /* Increase image width for small screens */
+  }
+
+  .coach-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .coach-text h2 {
+    font-size: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .coach-text p {
+    font-size: 14px;
+    text-align: left;
+  }
+}

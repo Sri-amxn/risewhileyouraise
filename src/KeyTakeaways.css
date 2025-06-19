@@ -1,0 +1,91 @@
+.key-takeaways {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.key-takeaways h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.container-takeaway {
+  display: flex;
+  gap: 20px;
+  width: 65%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+} 
+
+.right {
+  flex-shrink: 0;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.key-takeaways ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+
+}
+
+.key-takeaways li {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .key-takeaways h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    text-wrap: nowrap;
+    font-size: 5.5vw;
+  }
+  .container-takeaway {
+    flex-direction: column; /* Stack items vertically */
+    width: 90%; /* Increase width for better use of space */
+  }
+
+  .right {
+    width: 60%; /* Adjust image width for smaller screens */
+    order: 1; /* Image comes first */
+    margin-bottom: 20px; /* Add space between image and list */
+  }
+
+  .left {
+    width: 100%; /* Ensure list takes full width */
+    order: 2; /* List comes after the image */
+    font-size: small;
+  }
+
+  .key-takeaways li {
+    line-height: 1;
+  }
+}
