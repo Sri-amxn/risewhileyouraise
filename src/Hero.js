@@ -34,7 +34,7 @@ function Hero() {
             <button className='register' >Register</button>
           </a>
           
-          <p className='inline'>INR <span className="tilted-strike">5,000</span> 2,999 only</p>
+          <p className='inline'>INR 4,999 only</p>
         </div>
         <p className='scroll'>Scroll down to learn more</p>
       </div>

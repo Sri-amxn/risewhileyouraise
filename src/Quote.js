@@ -10,8 +10,8 @@ function Quote() {
       <a href='http://risewhileyouraise.rpy.club/course/aOtfIi6iGa'>
         <button>Register</button>
       </a>
-      
-      <p className='cost'>At INR 2,999 only</p>
+
+      <p className='cost'>At INR 4,999 only</p>
     </div>
   );
 }
